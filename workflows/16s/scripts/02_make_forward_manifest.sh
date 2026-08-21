@@ -20,6 +20,7 @@ find "$RAW_DIR" \
     | while read -r fastq
 do
     sample_id="$(basename "$fastq" "_L001_R1_001.fastq.gz")"
+    sample_id="${sample_id//_/-}"
     fastq_path="$(realpath "$fastq")"
 
     printf "%s\t%s\n" "$sample_id" "$fastq_path"
