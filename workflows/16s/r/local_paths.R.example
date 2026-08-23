@@ -1,0 +1,4 @@
+# Copy this file to local_paths.R and specify paths on your computer.
+
+input_dir <- "/path/to/16S_QIIME2/r_input"
+results_dir <- "/path/to/16S_results"

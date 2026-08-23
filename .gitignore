@@ -61,3 +61,13 @@ tmp/
 *~
 .DS_Store
 Thumbs.db
+
+# ============================================================
+# Local R files
+# ============================================================
+
+workflows/16s/r/local_paths.R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
