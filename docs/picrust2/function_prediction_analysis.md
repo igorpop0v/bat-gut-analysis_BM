@@ -14,8 +14,6 @@ The analysis included 76 independent biological samples divided into three group
 - **H**: hibernation;
 - **AAH**: active after hibernation.
 
-The positive sequencing control (`Control-16S`) was excluded before functional prediction and all downstream statistical analyses.
-
 ## Input data
 
 PICRUSt2 received:
@@ -339,33 +337,7 @@ Such results may be reported as predicted pathway signals but should not be inte
 
 Many MetaCyc pathways share reactions and predicted gene families. Significant pathways are therefore not statistically or biologically independent.
 
-### Amplicon limitations
 
-Predictions are limited to organisms captured by the 16S primer pair and retained by the forward-read processing workflow. Primer bias, sequencing quality, the 190-nucleotide Deblur trim length, and limited taxonomic resolution propagate into the functional predictions.
-
-### Top-pathway figures are selective summaries
-
-The composition and MaAsLin3 figures show only selected pathways to preserve readability. Selection was performed using explicit reproducible rules, while complete tables were retained for supplementary reporting.
-
-## Recommended reporting language
-
-Appropriate wording:
-
-> PICRUSt2 was used to infer bacterial community functional potential from 16S rRNA gene ASVs.
-
-> Predicted MetaCyc pathway profiles differed among the experimental groups.
-
-> The predicted relative representation of the pathway was higher during hibernation.
-
-Wording to avoid:
-
-> The pathway was activated during hibernation.
-
-> Metabolic activity increased.
-
-> The bacteria expressed more pathway genes.
-
-> Antibiotic resistance or methanogenesis was experimentally demonstrated.
 
 ## Reproducibility
 
