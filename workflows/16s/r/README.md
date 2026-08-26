@@ -12,3 +12,7 @@ Input and output directories are defined in `local_paths.R`.
 Create this local file from `local_paths.R.example`.
 
 The local paths file, input data, and generated results are not tracked by Git.
+
+The rationale and parameter choices for differential association analysis are
+documented in
+[`differential_association_analysis.md`](../../../docs/16s/differential_association_analysis.md).
