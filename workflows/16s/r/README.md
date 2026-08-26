@@ -6,6 +6,7 @@ The scripts are intended to be run in numerical order:
 2. `02_microbiota_composition.R` — summarize and visualize community composition;
 3. `03_diversity_analysis.R` — analyze alpha and beta diversity;
 4. `04_maaslin3_daa.R` — differential abundance analysis with MaAsLin3.
+5. `05_visualize_maaslin3.R` — create custom figures for significant MaAsLin3 abundance and prevalence associations.
 
 Input and output directories are defined in `local_paths.R`.
 Create this local file from `local_paths.R.example`.
