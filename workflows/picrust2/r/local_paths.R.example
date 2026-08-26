@@ -1,0 +1,3 @@
+picrust2_input_dir <- "/absolute/path/to/picrust2/r_input"
+
+picrust2_results_dir <- "/absolute/path/to/picrust2/R_results"

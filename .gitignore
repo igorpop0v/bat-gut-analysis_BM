@@ -71,3 +71,4 @@ workflows/16s/r/local_paths.R
 .RData
 .Ruserdata
 .Rproj.user/
+workflows/picrust2/r/local_paths.R
