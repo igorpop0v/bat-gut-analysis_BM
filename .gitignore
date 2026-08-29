@@ -72,3 +72,4 @@ workflows/16s/r/local_paths.R
 .Ruserdata
 .Rproj.user/
 workflows/picrust2/r/local_paths.R
+workflows/virome/r/local_paths.R

@@ -1,0 +1,7 @@
+# Copy this file to local_paths.R and specify paths on your computer.
+
+virome_tables_dir <- "/path/to/virome/metabuli/tables"
+
+virome_results_dir <- "/path/to/virome/R_results"
+
+virome_metadata_file <- "workflows/virome/metadata/virome_metadata.tsv"
