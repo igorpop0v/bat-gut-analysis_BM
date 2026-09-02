@@ -1,0 +1,8 @@
+candidate_id	analysis_id	sample_id	group	status	notes
+RNA_S12046Nr11|k119_2287	Current_Nr11	RNA_S12046Nr11	H	near_complete	91.7% P5 reference coverage; 100% read breadth
+RNA_S12046Nr21|k119_2289	Current_Nr21	RNA_S12046Nr21	AAH	near_complete	100% P5 reference coverage; 100% read breadth
+RNA_S12046Nr22|k119_1008	Current_Nr22	RNA_S12046Nr22	AAH	near_complete	100% P5 reference coverage; 100% read breadth
+RNA_S12046Nr6|k119_6392	Current_Nr6	RNA_S12046Nr6	ABH	near_complete	100% P5 reference coverage; 100% read breadth
+RNA_S12046Nr7|k119_2881	Current_Nr7	RNA_S12046Nr7	ABH	near_complete	100% P5 reference coverage; 100% read breadth
+RNA_S12046Nr8|k119_1433	Current_Nr8	RNA_S12046Nr8	ABH	near_complete	100% P5 reference coverage; 100% read breadth
+RNA_S12046Nr9|k119_3817	Current_Nr9	RNA_S12046Nr9	ABH	near_complete	100% P5 reference coverage; 100% read breadth
