@@ -57,15 +57,13 @@ def icon_query(host):
         return "ND"
 
     rules = [
-        (r"bat|Nyctalus|Miniopterus", "Eptesicus"),
+        (r"bat|Nyctalus|Vespertilio|Miniopterus", "Eptesicus"),
         (r"Anas", "Anas"),
         (r"Homo sapiens", "Homo sapiens"),
         (r"Culex|Aedes|Anopheles|Mosquito", "Culex"),
         (r"Penaeus|Fenneropenaeus", "Penaeus monodon"),
         (r"Cherax", "Decapoda"),
         (r"Actinonaias", "Unionidae"),
-        # The current PhyloPic API has no direct entry for Bactericera
-        # trigonica, but it does contain the parent superfamily Psylloidea.
         (r"Bactericera", "Psylloidea"),
         (r"Diaphorina", "Diaphorina citri"),
         (r"Asterias", "Asterias"),
@@ -170,8 +168,9 @@ def main():
         )
 
     genbank_file, manifest_file, labels_file, output_file = sys.argv[1:5]
-    # Kept only for compatibility with the earlier command-line interface.
-    # Collection years are now assigned explicitly from the study design.
+
+    # This optional argument is retained for compatibility with older commands.
+    # Collection years are assigned explicitly from the experimental design.
     legacy_current_year = sys.argv[5] if len(sys.argv) == 6 else None
 
     current_study_years = {
@@ -223,21 +222,35 @@ def main():
             if dataset == "previous_study":
                 collection_year = "2022"
                 study = "Popov et al., 2025"
+
+                if "RBHC_VM_" in display_label:
+                    host = "Vespertilio murinus"
+                elif "RBHC_NN_" in display_label:
+                    host = "Nyctalus noctula"
+                else:
+                    raise ValueError(
+                        "Cannot determine previous-study host for "
+                        f"{analysis_id}"
+                    )
+
             elif dataset == "current_study":
                 if group not in current_study_years:
                     raise ValueError(
                         "No collection year specified for current-study "
                         f"group {group!r}"
                     )
+
                 collection_year = current_study_years[group]
                 study = f"This study: {group}"
+                host = "Nyctalus noctula"
+
             else:
                 raise ValueError(f"Unexpected study dataset: {dataset}")
 
             values = {
                 "Country": "Russia",
-                "Host": "Nyctalus noctula",
-                "Host.icon.query": "Eptesicus",
+                "Host": host,
+                "Host.icon.query": icon_query(host),
                 "flag_code": "ru",
                 "Year": collection_year,
             }
@@ -281,6 +294,7 @@ def main():
     print("Densovirus tree metadata prepared.")
     print(f"Sequences: {len(output_rows)}")
     print(f"Output: {output_path}")
+
     if legacy_current_year is not None:
         print(
             "Note: the legacy CURRENT_STUDY_YEAR argument was ignored; "

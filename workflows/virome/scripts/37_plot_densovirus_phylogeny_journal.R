@@ -55,9 +55,9 @@ dir.create(flags_dir, recursive = TRUE, showWarnings = FALSE)
 minimum_alrt <- 80
 minimum_ufboot <- 95
 
+# This monophyletic outgroup is preserved in the primary, study-inclusive,
+# and sensitivity topologies, allowing all three trees to be rooted equally.
 outgroup_ids <- c(
-  "NC_011545.2",
-  "NC_077018.1",
   "NC_015115.1",
   "NC_011317.1",
   "NC_012636.1"

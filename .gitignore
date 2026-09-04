@@ -71,5 +71,11 @@ workflows/16s/r/local_paths.R
 .RData
 .Ruserdata
 .Rproj.user/
+
+# Python cache and local editor files
+__pycache__/
+*.py[cod]
+.DS_Store
+.Rproj.user/
 workflows/picrust2/r/local_paths.R
 workflows/virome/r/local_paths.R
