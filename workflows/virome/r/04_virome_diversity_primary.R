@@ -753,7 +753,7 @@ beta_label <- paste0(
     digits = 2,
     format = "f"
   ),
-  ", R² = ",
+  "\nR² = ",
   formatC(
     permanova_overall$r_squared,
     digits = 3,
